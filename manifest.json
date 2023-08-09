@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "HydrateBuddy",
+    "version": "1.0",
+    "description": "Get reminded to drink water at regular intervals.",
+    "permissions": ["alarms", "notifications", "storage"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+        "48":"icon.png"
+    },
+    "action": {
+      "default_popup": "options.html"
+    }
+  }
+  
